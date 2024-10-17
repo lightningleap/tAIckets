@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #6B38FB;
+  --color-secondary: #FFFFFF;
+  --color-accent-light: #F1F1F1;
+  --color-accent-dark: #3E3E3E;
+  --color-black: #000000;
+  --color-hover: #A072FF;
+}
+
+@layer base {
+  html {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    @apply bg-secondary text-accent-dark;
+  }
+
+  h1 {
+    @apply text-5xl font-bold;
+  }
+
+  h2 {
+    @apply text-4xl font-semibold;
+  }
+
+  h3 {
+    @apply text-3xl font-semibold;
+  }
+
+  h4 {
+    @apply text-2xl font-medium;
+  }
+
+  h5 {
+    @apply text-xl font-medium;
+  }
+
+  h6 {
+    @apply text-lg font-normal;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-bold py-2 px-4 rounded hover:bg-hover transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-primary text-primary font-bold py-2 px-4 rounded hover:border-hover hover:text-hover transition-colors duration-300;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300;
+  }
+}
